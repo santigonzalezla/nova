@@ -61,7 +61,13 @@ const work = [
     </div>
     <div class="projects-bottom">
         {work.map((project) => (
-            <ProjectCard {...project} />
+            <ProjectCard
+                title={project.title}
+                image={project.image}
+                time={project.time}
+                cost={project.cost}
+                type={project.type}
+            />
         ))}
     </div>
 </section>

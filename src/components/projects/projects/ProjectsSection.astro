@@ -38,8 +38,8 @@ const projects = [
         <h2>Convierte tu visión en realidad</h2>
     </div>
     <div class="projects-bottom">
-        {projects.map((project, index) => (
-            <ProjectItem key={index} project={project} client:visible />
+        {projects.map((project) => (
+            <ProjectItem project={project} client:visible />
         ))}
     </div>
 </section>

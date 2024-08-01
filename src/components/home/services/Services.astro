@@ -57,7 +57,13 @@ const services = [
     </div>
     <div class="-services-bottom">
         {services.map((service) => (
-            <ServicesCard {...service} />
+            <ServicesCard
+                title={service.title}
+                description={service.description}
+                color={service.color}
+                svg={service.svg}
+                link={service.link}
+            />
         ))}
     </div>
 </section>
