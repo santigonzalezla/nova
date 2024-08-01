@@ -1,0 +1,137 @@
+---
+import ServicesCard from "./ServicesCard.astro";
+
+const services = [
+    {
+        title: "Desarrollo Web y Móvil",
+        description: "Soluciones personalizadas para la creación de sitios web y aplicaciones móviles, diseñadas para alcanzar tus objetivos comerciales.",
+        color: "purple",
+        svg: "sv1",
+        link: "/services#services",
+    },
+    {
+        title: "Soluciones de Software",
+        description: "Software a medida que se adapta a tus necesidades, incluyendo sistemas de gestión, CRMs y aplicaciones empresariales.",
+        color: "orange",
+        svg: "sv2",
+        link: "/services#services",
+    },
+    {
+        title: "Seguridad Informática",
+        description: "Implementamos medidas de seguridad avanzadas para proteger tus datos y sistemas contra amenazas cibernéticas.",
+        color: "pink",
+        svg: "sv3",
+        link: "/services#services",
+    },
+    {
+        title: "Google & Facebook Ads",
+        description: "Gestión de campañas publicitarias en Google y Facebook para aumentar la visibilidad de tu marca y atraer nuevos clientes.",
+        color: "purple",
+        svg: "sv4",
+        link: "/services#services",
+    },
+    {
+        title: "Diseño Estratégico",
+        description: "Diseñamos estrategias digitales que te ayudan a alcanzar tus objetivos de negocio y a conectar con tu audiencia.",
+        color: "orange",
+        svg: "sv5",
+        link: "/services#services",
+    },
+    {
+        title: "Business Analytics ",
+        description: "Análisis de datos para identificar oportunidades de crecimiento y mejorar la toma de decisiones en tu empresa.",
+        color: "pink",
+        svg: "sv6",
+        link: "/services#services",
+    },
+];
+---
+<section id="services" class="services">
+    <div class="services-top">
+        <h2>Nuestros Servicios</h2>
+        <p>
+            En NovaGL, hemos construido un legado de colaboración y dedicación para ayudar a nuestros clientes a
+            alcanzar sus metas digitales. Desde pequeñas empresas hasta grandes corporaciones, hemos sido testigos de
+            cómo nuestras.
+        </p>
+    </div>
+    <div class="-services-bottom">
+        {services.map((service) => (
+            <ServicesCard {...service} />
+        ))}
+    </div>
+</section>
+
+<style>
+    .services
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 70px 100px;
+        justify-content: space-between;
+    }
+
+    .services-top
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .services-top h2
+    {
+        font-size: 40px;
+        font-weight: 700;
+        width: 100%;
+        flex-basis: 40%;
+    }
+
+    .services-top p
+    {
+        flex-basis: 60%;
+        width: 100%;
+        font-weight: 300;
+    }
+
+    .-services-bottom
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .services
+        {
+            padding: 40px 20px;
+            gap: 25px;
+            height: 100%;
+        }
+
+        .services-top
+        {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .services-top h2
+        {
+            font-size: 35px;
+            color: rgba(253, 67, 2, 0.7);
+        }
+
+        .services-top p
+        {
+            font-size: 16px;
+        }
+
+        .-services-bottom
+        {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+</style>

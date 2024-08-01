@@ -1,0 +1,238 @@
+---
+import Button from "../../shared/Button.astro";
+import PopupButton from "../../react-components/PopupButton";
+---
+
+<div class="hero">
+    <div class="hero-left">
+        <svg class="icon line" width="79" height="5" viewBox="0 0 79 5" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="2.5" x2="78.0256" y2="2.5" stroke="#FF4200" stroke-width="5"/></svg>
+        <svg class="icon circle" width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28.0128" cy="28" r="24.5" stroke="#FF4200" stroke-width="7"/><circle cx="28.0128" cy="28" r="12" fill="#202329"/></svg>
+        <svg class="icon x" width="23" height="25" viewBox="0 0 23 25" fill="#202329" xmlns="http://www.w3.org/2000/svg"><path d="M0.260817 25L10.5328 11.752L10.4848 12.424L0.788817 0.0879974H2.66082L11.4928 11.416H10.8208L19.6048 0.0879974H21.4288L11.6848 12.616L11.7328 11.704L22.1488 25H20.1808L10.8688 12.904L11.3968 12.952L2.13282 25H0.260817Z" fill="#202329"/></svg>
+        <h1>Innovación digital al alcance de tu mano</h1>
+        <p>¿Listo para llevar tu presencia en línea al siguiente nivel? Descubre cómo NovaGL puede ayudarte a alcanzar tus metas digitales.</p>
+        <div class="hero-buttons">
+            <Button
+                    text="Contáctanos"
+                    link="#contact"
+                    color="black"
+            >
+            </Button>
+            <Button
+                    text="Nuestros servicios"
+                    link="#services"
+                    color="light"
+            >
+            </Button>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="hero-right-trasparency">
+            <div class="hero-right-bottom">
+                <div class="hero-right-title-1">
+                    <h1>Desing</h1>
+                </div>
+                <div class="hero-right-title-2">
+                    <h1>{"</code>"}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hero
+    {
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .hero-buttons
+    {
+        display: flex;
+        gap: 20px;
+    }
+
+    .hero-logos
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .hero-left
+    {
+        position: relative;
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .hero-left h1
+    {
+        font-size: 64px;
+        font-weight: 900;
+        width: 90%;
+    }
+
+    .hero-left p
+    {
+        font-weight: 300;
+        width: 80%;
+    }
+
+    .icon
+    {
+        position: absolute;
+    }
+
+    .line
+    {
+        top: 5%;
+    }
+
+    .x
+    {
+        top: 5%;
+        right: 20px;
+    }
+
+    .circle
+    {
+        right: 30px;
+        top: 50%;
+    }
+
+    .hero-right
+    {
+        position: relative;
+        flex-basis: 45%;
+        border-radius: 20px;
+        background-color: #202329;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        background-image: url('https://i.imgur.com/qdunMII.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-right-trasparency
+    {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(32, 35, 41, 0.8);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px 50px 30px 50px;
+        gap: 100px;
+    }
+
+    .hero-right-title-1 h1
+    {
+        position: absolute;
+        margin: 0;
+        font-size: 80px;
+        font-weight: 900;
+        color: #FFF;
+        left: 40px;
+        bottom: 115px;
+    }
+
+    .hero-right-title-2 h1
+    {
+        position: absolute;
+        left: 40px;
+        bottom: 30px;
+        width: fit-content;
+        margin: 0;
+        font-size: 80px;
+        font-weight: 900;
+        background-image: linear-gradient(to right, #8200ff, #e400c0, #FF4200, #FF4200, #FF4200);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @media screen and (max-width: 767px)
+    {
+        .hero
+        {
+            width: 100%;
+            display: flex;
+            padding: 0;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-left
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            gap: 30px;
+        }
+
+        .hero-buttons
+        {
+            flex-direction: row;
+        }
+
+        .hero-left h1
+        {
+            width: 100%;
+            font-size: 50px;
+        }
+
+        .hero-left p
+        {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .hero-buttons
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .line
+        {
+            top: -3%;
+        }
+
+        .x
+        {
+            top: 0;
+            right: 0;
+        }
+
+        .circle
+        {
+            right: 30px;
+            top: 45%;
+        }
+
+        .hero-right,
+        .hero-logos
+        {
+            display: none;
+        }
+    }
+</style>

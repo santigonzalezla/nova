@@ -1,0 +1,110 @@
+---
+import ServicesList from "../../react-components/ServicesList";
+
+const services: Service = [
+    {
+        "title": "Innovación en Cada Sistema para Impulsar Tu Negocio",
+        "name": "Soluciones de Software",
+        "description": "Desarrollamos soluciones de software personalizadas que se adaptan perfectamente a las necesidades específicas de tu negocio. Nuestros productos aseguran eficiencia, escalabilidad y un rendimiento superior, ayudándote a optimizar tus procesos y alcanzar tus objetivos empresariales. Desde aplicaciones de gestión empresarial hasta plataformas complejas de comercio electrónico, nuestras soluciones están diseñadas para ofrecer resultados tangibles y mejorar la productividad.",
+        "shortDescription": "Desarrollamos soluciones de software personalizadas que se adaptan perfectamente a las necesidades específicas de tu negocio. Nuestros productos aseguran eficiencia, escalabilidad y un rendimiento superior.",
+    },
+    {
+        "title": "Presencia Digital Impecable en Todas las Plataformas",
+        "name": "Desarrollo Web y Móvil",
+        "description": "Creamos sitios web y aplicaciones móviles que son funcionales, atractivas y altamente responsivas. Mejoramos la experiencia del usuario y fortalecemos tu presencia en línea, asegurando que tu marca se destaque en un entorno digital competitivo. Utilizamos las últimas tecnologías y tendencias de diseño para crear productos digitales que no solo impresionen visualmente, sino que también proporcionen un rendimiento óptimo y una navegación intuitiva.",
+        "shortDescription": "Creamos sitios web y aplicaciones móviles que son funcionales, atractivas y altamente responsivas. Mejoramos la experiencia del usuario y fortalecemos tu presencia en línea.",
+    },
+    {
+        "title": "Protección Integral de Datos y Seguridad Cibernética",
+        "name": "Seguridad Informática",
+        "description": "Implementamos medidas de seguridad avanzadas para proteger la información sensible de tu empresa. Desde la prevención de amenazas hasta la gestión de riesgos, garantizamos la integridad, confidencialidad y disponibilidad de tus datos en todo momento. Nuestra oferta incluye auditorías de seguridad, implementación de firewalls, encriptación de datos y formación en ciberseguridad para tu equipo, asegurando un entorno digital seguro y confiable.",
+        "shortDescription": "Implementamos medidas de seguridad avanzadas para proteger la información sensible de tu empresa. Desde la prevención de amenazas hasta la gestión de riesgos, garantizamos la integridad.",
+    },
+    {
+        "title": "Publicidad Digital Eficiente para Maximizar Tu Alcance",
+        "name": "Google & Facebook Ads",
+        "description": "Diseñamos y gestionamos campañas publicitarias en Google y Facebook que están orientadas a maximizar tu alcance y retorno de inversión. Atraemos a tu audiencia objetivo de manera efectiva, incrementando tu visibilidad y potenciando tus ventas. Nuestras estrategias publicitarias se basan en análisis detallados y segmentación precisa, lo que garantiza que tus anuncios lleguen a las personas adecuadas en el momento adecuado.",
+        "shortDescription": "Diseñamos y gestionamos campañas publicitarias en Google y Facebook que están orientadas a maximizar tu alcance y retorno de inversión. Atraemos a tu audiencia objetivo de manera efectiva.",
+    },
+    {
+        "title": "Creatividad y Estrategia para Potenciar Tu Marca",
+        "name": "Diseño Estratégico",
+        "description": "Desarrollamos estrategias de diseño visual que comunican eficazmente tu mensaje y atraen a tus clientes. A través de un enfoque creativo y estratégico, mejoramos la identidad de tu marca y aseguramos una conexión profunda con tu audiencia. Nuestros servicios incluyen diseño de logotipos, creación de identidad corporativa, diseño gráfico y desarrollo de materiales promocionales, todos enfocados en transmitir los valores y la misión de tu empresa de manera clara y atractiva.",
+        "shortDescription": "Desarrollamos estrategias de diseño visual que comunican eficazmente tu mensaje y atraen a tus clientes. A través de un enfoque creativo y estratégico, mejoramos la identidad de tu marca.",
+    },
+    {
+        "title": "Decisiones Inteligentes usando Análisis de Datos",
+        "name": "Business Analytics",
+        "description": "Proveemos herramientas y análisis avanzados que transforman datos en información valiosa. Nuestro enfoque te ayuda a tomar decisiones estratégicas informadas, optimizando tus operaciones y mejorando el rendimiento general de tu negocio. Ofrecemos soluciones de análisis predictivo, visualización de datos y generación de informes detallados, permitiéndote identificar tendencias, medir el éxito de tus iniciativas y descubrir oportunidades de mejora continua.",
+        "shortDescription": "Proveemos herramientas y análisis avanzados que transforman datos en información valiosa. Nuestro enfoque te ayuda a tomar decisiones estratégicas informadas, optimizando tus operaciones.",
+    }
+]
+---
+
+<section class="services" id="services">
+    <div class="services-top">
+        <h3>Nuestros Servicios</h3>
+        <h2>Estrategias digitales que funcionan</h2>
+    </div>
+    <div class="services-bottom">
+        <ServicesList services={services} client:visible/>
+    </div>
+</section>
+
+<style>
+    .services
+    {
+        padding: 70px 100px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .services-top
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+    }
+
+    .services-top h3
+    {
+        color: var(--orange);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    .services-top h2
+    {
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    .services-bottom
+    {
+        height: 500px;
+        flex-basis: 30%;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .services
+        {
+            padding: 40px 20px;
+            height: 100%;
+        }
+
+        .services-bottom
+        {
+            height: 100%;
+            flex-basis: 100%;
+        }
+    }
+</style>

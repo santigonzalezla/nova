@@ -1,0 +1,213 @@
+---
+
+import WhyUsCard from "./WhyUsCard.astro";---
+<section id="whyus" class="whyus">
+    <div class="whyus-top">
+        <div class="whyus-title">
+            <h3>Tu aliado en la era digital</h3>
+            <h2>Estrategias digitales que funcionan</h2>
+        </div>
+        <div class="whyus-top-cards">
+            <WhyUsCard
+                title="Conoce nuestras ventajas exclusivas"
+                description="Disfruta de un soporte personalizado y resultados garantizados que superan tus expectativas."
+                color="rgba(130, 0, 255, 0.15)"
+            />
+            <WhyUsCard
+                title="Descubre nuestros beneficios únicos "
+                description="Accede a consultoría experta, soluciones a medida para ti y alta calidad en cada uno de tus proyectos."
+                color="rgba(255, 66, 0, 0.15"
+            />
+            <WhyUsCard
+                title="¿Sabes que obtienes al trabajar con nosotros?"
+                description="Disfruta de atención al cliente excepcional, tecnología de punta y máxima eficiencia en cada proyecto"
+                color="rgba(255, 27, 107, 0.15)"
+            />
+        </div>
+    </div>
+    <div class="whyus-bottom">
+        <div class="whyus-bottom-left">
+            <h2>Innovación que transforma</h2>
+            <p>Disfruta de un soporte personalizado y resultados garantizados que superan tus expectativas.</p>
+            <ul>
+                <li>
+                    <div class="list-dot"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16"><path fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m2.75 8.75l3.5 3.5l7-7.5"/></svg></div>
+                    <span>Consultoría experta</span>
+                </li>
+                <li>
+                    <div class="list-dot"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16"><path fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m2.75 8.75l3.5 3.5l7-7.5"/></svg></div>
+                    <span>Soluciones a medida</span>
+                </li>
+                <li>
+                    <div class="list-dot"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16"><path fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m2.75 8.75l3.5 3.5l7-7.5"/></svg></div>
+                    <span>Alta calidad en cada proyecto</span>
+                </li>
+            </ul>
+        </div>
+        <div class="whyus-bottom-right">
+            <img src="https://i.imgur.com/WR9EX9k.png" alt="Why Us Image" loading="lazy"/>
+        </div>
+    </div>
+</section>
+
+<style>
+    .whyus
+    {
+        padding: 30px 100px;
+        height: 100vh;
+        background-color: var(--light-purple);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .whyus h3
+    {
+        color: var(--orange);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    .whyus h2
+    {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .whyus-title
+    {
+        text-align: center;
+    }
+
+    .whyus-top
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .whyus-top-cards
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .whyus-bottom
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .whyus-bottom-left
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex-basis: 50%;
+    }
+
+    .whyus-bottom-left h2
+    {
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .whyus-bottom-left p
+    {
+        font-weight: 300;
+    }
+
+    .whyus-bottom-left ul
+    {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .whyus-bottom-left ul li
+    {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-weight: 300;
+    }
+
+    .list-dot
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+        background-color: var(--orange);
+        border-radius: 50%;
+    }
+
+    .whyus-bottom-right
+    {
+        flex-basis: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .whyus-bottom-right img
+    {
+        width: 400px;
+        height: 300px;
+        object-fit: fill;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .whyus
+        {
+            padding: 40px 20px;
+            gap: 30px;
+            height: 100%;
+        }
+
+        .whyus h2
+        {
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        .whyus-top-cards
+        {
+            grid-template-columns: 1fr;
+        }
+
+        .whyus-bottom
+        {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .whyus-bottom-left
+        {
+            flex-basis: 100%;
+        }
+
+        .whyus-bottom-right
+        {
+            flex-basis: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whyus-bottom-right img
+        {
+            display: none;
+        }
+
+    }
+</style>

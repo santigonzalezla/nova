@@ -1,0 +1,70 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const { title, description, icon } = Astro.props;
+---
+
+<div class="whyus-card">
+    <Icon size={75} name={icon} class="svg" />
+    <div class="whyus-card-info">
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </div>
+</div>
+
+<style>
+    .whyus-card
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h3
+    {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    p
+    {
+        font-weight: 300;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .whyus-card
+        {
+            padding: 0px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .whyus-card-info
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .whyus-card-info h3
+        {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .whyus-card-info p
+        {
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+    }
+</style>

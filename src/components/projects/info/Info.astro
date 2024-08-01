@@ -1,0 +1,192 @@
+---
+
+import Button from "../../shared/Button.astro";---
+
+<section class="about" id="about">
+    <div class="about-left">
+        <div class="about-left-top">
+            <h2>Tenemos un equipo dispuesto a ayudarte</h2>
+            <p>Con una amplia gama de servicios especializados diseñados para satisfacer tus necesidades y superar tus expectativas.</p>
+            <Button color="dark" text="Reserva tu Cita!"/>
+        </div>
+        <div class="about-left-bottom">
+            <img src="https://i.imgur.com/q3klgPj.jpeg" alt="Ventajas1"/>
+        </div>
+    </div>
+    <div class="about-right">
+        <div class="about-right-top">
+            <img src="https://i.imgur.com/phmvSOL.jpeg" alt="Ventajas2"/>
+        </div>
+        <div class="about-right-bottom">
+            <div class="about-right-bottom-title">
+                <h3>Soluciones Personalizadas</h3>
+                <p>En NovaGL, cada proyecto se adapta a tus necesidades y objetivos específicos, asegurando una estrategia única y efectiva.</p>
+            </div>
+            <div class="about-right-bottom-title">
+                <h3>Experiencia Garantizada</h3>
+                <p>Nuestro equipo está compuesto por expertos en crecimiento digital, garantizando resultados excepcionales.</p>
+            </div>
+            <div class="about-right-bottom-title">
+                <h3>Soporte Continuo</h3>
+                <p>Te ofrecemos un soporte dedicado y constante, asegurando que cada proyecto funcione de manera óptima.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about
+    {
+        background: var(--light-purple);
+        padding: 70px 100px;
+        display: flex;
+        height: 100vh;
+        gap: 90px;
+    }
+
+    .about-left
+    {
+        flex-basis: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .about-left-top
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-left-top h2
+    {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .about-left-bottom
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-left-bottom img
+    {
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .about-right
+    {
+        flex-basis: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .about-right-top
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-basis: 30%;
+    }
+
+    .about-right-top img
+    {
+        border-radius: 20px;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .about-right-bottom
+    {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about-right-bottom-title
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-right-bottom-title h3
+    {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .about-right-bottom-title p
+    {
+        font-size: 16px;
+        width: 90%;
+        font-weight: 300;
+        line-height: 29px;
+        color: var(--light-gray);
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .about
+        {
+            padding: 40px 20px;
+            flex-direction: column;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .about-left-top h2
+        {
+            font-size: 30px;
+        }
+
+        .about-left-bottom img
+        {
+            display: none;
+        }
+
+        .about-right
+        {
+            flex-basis: 100%;
+            gap: 30px;
+        }
+
+        .about-right-bottom
+        {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .about-right-bottom-title
+        {
+            gap: 10px;
+        }
+
+        .about-right-top img
+        {
+            height: 200px;
+        }
+
+        .about-right-bottom-title h3
+        {
+            font-size: 20px;
+        }
+
+        .about-right-bottom-title p
+        {
+            font-size: 14px;
+        }
+
+    }
+</style>

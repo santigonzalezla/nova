@@ -1,0 +1,153 @@
+---
+import FAQList from "../../react-components/FAQList";
+
+const accordionItems = [
+    {
+        title: '¿Cómo puedo saber si Nova GL es adecuado para mí?',
+        content: 'Nova GL cuenta con un equipo de expertos en marketing digital que pueden ayudarte a alcanzar tus objetivos comerciales. ',
+    },
+    {
+        title: '¿Qué tipo de resultados puedo esperar de trabajar con Nova GL?',
+        content: 'Nuestros resultados muestran que nuestros clientes han logrado un aumento significativo en la visibilidad de su marca.',
+    },
+    {
+        title: '¿Qué experiencia tiene Nova GL?',
+        content: 'Nuestro  conocimiento y compromiso garantizan un equipo perfecto para abordar los desafíos de la difusión en la era digital.',
+    },
+    {
+        title: '¿Cómo puedo comenzar a trabajar con Nova GL?',
+        content: 'Puedes contactarnos por teléfono, correo electrónico o a través de nuestro sitio web para programar una cita.',
+    }
+
+];
+---
+
+<section class="faq" id="faq">
+    <div class="faq-left">
+        <h1>Siempre estamos aquí para ayudarte</h1>
+        <p>Compartimos contigo estrategias y consejos para que puedas sacar el máximo provecho de nuestros servicios.</p>
+        <div class="faq-tips">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <circle cx="15" cy="15" r="15" fill="white"/>
+                <path d="M13.1117 19.6923C12.87 19.6923 12.6287 19.6016 12.4442 19.4196L8 15.039L9.33504 13.7226L13.1117 17.4452L20.665 10L22 11.3164L13.7792 19.4196C13.5946 19.6016 13.3534 19.6923 13.1117 19.6923Z" fill="#FF4200"/>
+            </svg>
+            <div class="faq-tips-item">
+                <h4>Estrategias personalizadas</h4>
+                <p>Creamos estrategias personalizadas para cada cliente, basadas en sus necesidades y objetivos.</p>
+            </div>
+        </div>
+        <div class="faq-tips">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <circle cx="15" cy="15" r="15" fill="white"/>
+                <path d="M13.1117 19.6923C12.87 19.6923 12.6287 19.6016 12.4442 19.4196L8 15.039L9.33504 13.7226L13.1117 17.4452L20.665 10L22 11.3164L13.7792 19.4196C13.5946 19.6016 13.3534 19.6923 13.1117 19.6923Z" fill="#FF4200"/>
+            </svg>
+            <div class="faq-tips-item">
+                <h4>Soporte 24 horas</h4>
+                <p>Estamos disponibles las 24 horas del día para responder a tus preguntas y ayudarte con cualquier problema.</p>
+            </div>
+        </div>
+    </div>
+    <div class="faq-right">
+        <FAQList client:visible items={accordionItems} />
+    </div>
+</section>
+
+<style>
+    .faq
+    {
+        background: var(--orange);
+        padding: 70px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+        gap: 90px;
+    }
+
+    .faq-left
+    {
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .faq-left h1
+    {
+        font-size: 48px;
+        font-weight: 700;
+        color: var(--white);
+    }
+
+    .faq-left p
+    {
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+    .faq-tips
+    {
+        display: flex;
+        gap: 20px;
+    }
+
+    .faq-tips h4
+    {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--white);
+    }
+
+    .faq-tips-bullet
+    {
+        width: 10px;
+        height: 10px;
+        background: var(--white);
+        border-radius: 50%;
+    }
+
+    .faq-right
+    {
+        width: 100%;
+        flex-basis: 50%;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .faq
+        {
+            padding: 40px 20px;
+            flex-direction: column;
+            gap: 40px;
+            height: 100%;
+        }
+
+        .faq-left
+        {
+            flex-basis: 100%;
+            gap: 20px;
+        }
+
+        .faq-left h1
+        {
+            font-size: 30px;
+        }
+
+        .faq-left p
+        {
+            font-size: 16px;
+        }
+
+        .faq-tips h4
+        {
+            font-size: 20px;
+        }
+
+        .faq-tips-bullet
+        {
+            width: 8px;
+            height: 8px;
+        }
+    }
+</style>

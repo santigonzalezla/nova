@@ -1,0 +1,177 @@
+---
+import WhyUsCard from "./WhyUsCard.astro";
+import PopupButton from "../../react-components/PopupButton";
+
+const WhyUsList = [
+    {
+        title: "Experiencia y Profesionalismo",
+        description: "Nos esforzamos por ofrecer soluciones tecnológicas de alta calidad que cumplan y superen las expectativas de nuestros clientes.",
+        icon: "busi",
+    },
+    {
+        title: "Soluciones Personalizadas",
+        description: "Creamos soluciones a la medida que se adapten perfectamente a las necesidades específicas de tu empresa, asegurando el alcance de tus objetivos.",
+        icon: "person",
+    },
+    {
+        title: "Innovación Constante",
+        description: "Nos mantenemos a la vanguardia de las últimas tecnologías y tendencias del mercado para ofrecerte soluciones  eficientes que impulsan tu negocio.",
+        icon: "inno",
+    },
+    {
+        title: "Soporte y Mantenimiento",
+        description: "Ofrecemos soporte continuo y servicios de mantenimiento para garantizar que tu sitio web o aplicación funcione perfectamente en todo momento.",
+        icon: "char",
+    },
+]
+---
+<section id="whyus" class="whyus">
+    <div class="whyus-top">
+        <div class="whyus-top-left">
+            <h3>¿Por qué <span>Nosotros?</span></h3>
+            <h2>Nuestros clientes nos eligen porque damos lo mejor para todos.</h2>
+            <p>
+                En Nova GL, nos esforzamos por darte un servicio de calidad. Nuestro equipo de expertos en tecnología
+                está aquí para ayudarte a desbloquear todo el potencial de tu negocio.
+            </p>
+        </div>
+        <div class="whyus-top-right">
+            {WhyUsList.map((item) => (
+                <WhyUsCard {...item} />
+            ))}
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="3" viewBox="0 0 1247 3" fill="none">
+        <path d="M1.56031 1.5H1245.44" stroke="#FF4200" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div class="whyus-bottom">
+        <div class="whyus-bottom-left">
+            <h2>¿Listo para lanzar tu próximo proyecto?</h2>
+            <p>
+                Transforma tu visión en realidad. ¡Despega con nosotros hoy mismo y lleva tu proyecto al siguiente nivel!
+            </p>
+        </div>
+        <PopupButton client:visible />
+    </div>
+</section>
+
+<style>
+    .whyus
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 70px 100px;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--light-purple)
+    }
+
+    .whyus-top
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 65px;
+    }
+
+    .whyus-top-left
+    {
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .whyus-top-left h3
+    {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .whyus-top-left h2
+    {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .whyus-top-left p
+    {
+        font-weight: 300
+    }
+
+    .whyus-top-left span
+    {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .whyus-top-right
+    {
+        flex-basis: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px;
+    }
+
+    .whyus-bottom
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .whyus-bottom-left
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .whyus-bottom-left h2
+    {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .whyus-bottom-left p
+    {
+        font-weight: 300;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .whyus
+        {
+            padding: 40px 20px;
+            height: 100%;
+            gap: 35px;
+        }
+
+        .whyus-top
+        {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .whyus-top-left
+        {
+            flex-basis: 100%;
+        }
+
+        .whyus-top-right
+        {
+            flex-basis: 100%;
+            grid-template-columns: 1fr;
+        }
+
+        .whyus-bottom
+        {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+</style>

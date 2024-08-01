@@ -1,0 +1,159 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+    color: string;
+    description: string;
+    svg: object;
+    title: string;
+    link: string;
+}
+
+const { title, description, svg, color, link } = Astro.props;
+---
+
+<div class={`service-card service-card-${color}`}>
+    <Icon size={70} name={svg} class="svg" />
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <a class={color} href={link}>
+        <span class={`button button-${color}`}><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9.09941 2.32577L1.4329 2.22338C1.11998 2.2192 0.860909 2.10832 0.655686 1.89075C0.450462 1.67317 0.346018 1.40767 0.342353 1.09424C0.351385 0.794533 0.45538 0.538332 0.654336 0.325635C0.853292 0.112939 1.10949 0.00894442 1.42294 0.0136524L11.7493 0.15157C11.9057 0.15366 12.0464 0.184739 12.1713 0.244809C12.2962 0.304878 12.411 0.388276 12.5157 0.495005C12.6203 0.601734 12.7032 0.717035 12.7643 0.840911C12.8254 0.964786 12.8568 1.10521 12.8583 1.26219L12.9962 11.5885C13.0001 11.8753 12.8957 12.125 12.6832 12.3375C12.4707 12.5501 12.2148 12.6606 11.9157 12.6691C11.6027 12.6649 11.3371 12.5537 11.1189 12.3354C10.9006 12.1171 10.7896 11.8518 10.786 11.5394L10.6849 3.91126L2.05949 12.5367C1.8408 12.7554 1.58126 12.8627 1.28085 12.8587C0.980452 12.8547 0.718466 12.7404 0.494899 12.5158C0.271331 12.2912 0.15702 12.0287 0.151964 11.7282C0.146909 11.4278 0.254254 11.1688 0.474002 10.9512L9.09941 2.32577Z" fill="white"/></svg></span>
+        Conoce más
+    </a>
+</div>
+
+<style>
+    .service-card
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 40px 25px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+        transition: 0.3s ease-in-out all;
+    }
+
+    .service-card-purple
+    {
+        background: rgba(130, 0, 255, 0.15);
+    }
+
+    .service-card-orange
+    {
+        background: rgba(255, 66, 0, 0.15);
+    }
+
+    .svg
+    {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    .service-card-pink
+    {
+        background: rgba(255, 27, 107, 0.15);
+    }
+
+    h3
+    {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    p
+    {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    a
+    {
+        text-decoration: none;
+        background: transparent;
+        color: var(--dark-gray);
+        font-size: 16px;
+        font-family: 'Satoshi', sans-serif;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 11px;
+    }
+
+    .button-purple
+    {
+        background: rgba(130, 0, 255, 0.75);
+    }
+
+    .button-orange
+    {
+        background: rgba(255, 66, 0, 0.60);
+    }
+
+    .button-pink
+    {
+        background: rgba(255, 27, 107, 0.60);
+    }
+
+    .service-card:hover
+    {
+        transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .service-card
+        {
+            padding: 20px;
+        }
+
+        h3
+        {
+            font-size: 16px;
+        }
+
+        p
+        {
+            display: none;
+        }
+
+        .button svg
+        {
+            width: 8px;
+            height: 8px;
+        }
+
+        .button
+        {
+            padding: 8px;
+        }
+
+        button
+        {
+            font-size: 12px;
+        }
+
+        .svg
+        {
+            z-index: -1;
+            width: 125px;
+            height: 125px;
+            opacity: 0.1;
+            top: 0;
+            right: 5%;
+        }
+    }
+</style>

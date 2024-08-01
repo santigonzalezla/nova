@@ -1,0 +1,74 @@
+---
+interface Props {
+    text: string;
+    link: string;
+    color: string;
+}
+
+const {text, link, color} = Astro.props;
+---
+
+<button class={color}>
+    <a href={link}>
+        {text}
+        <slot />
+    </a>
+</button>
+
+<style>
+    .dark
+    {
+        background: var(--gradient);
+        color: #FFF;
+        border-radius: 10px;
+    }
+
+    .black
+    {
+        background: var(--dark-gray);
+        color: #FFF;
+        border-radius: 10px;
+    }
+
+    .light
+    {
+        background-color: #FFF;
+        color: #142133;
+        border-radius: 10px;
+        border: 2px solid #142133;
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    button
+    {
+        font-family: 'Satoshi', sans-serif;
+        color: white;
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        padding: 12px 25px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    button:hover
+    {
+        transform: scale(1.1);
+    }
+</style>

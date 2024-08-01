@@ -1,0 +1,184 @@
+---
+import Contact from "../react-components/Contact";
+
+const social = [
+    {
+        icon: 'fab fa-whatsapp',
+        link: 'novagl.dev@gmail.com'
+    },
+    {
+        icon: 'fab fa-telegram',
+        link: '+57 (317) 4319914'
+    },
+    {
+        icon: 'fab fa-discord',
+        link: '@novagl.dev'
+    },
+    {
+        icon: 'fab fa-facebook-f',
+        link: 'novagl-dev'
+    },
+    {
+        icon: 'fab fa-twitter',
+        link: 'dribble.com/novagl'
+    },
+    {
+        icon: 'fab fa-instagram',
+        link: 'instagram.com/novagltech/'
+    },
+    {
+        icon: 'fab fa-linkedin-in',
+        link: 'linkedin.com/company/novagltech'
+    },
+    {
+        icon: 'fab fa-youtube',
+        link: 'youtube.com/channel'
+    }
+]
+---
+
+<section id="contact" class="contact">
+    <div class="contact-left">
+        <div class="contact-left-info">
+            <div class="contact-left-info-social">
+                {social.map((item) => (
+                    <a href={item.link}>
+                        <div class="contact-left-info-social-icon"></div>
+                        <span>{item.link}</span>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </div>
+    <div class="contact-right">
+        <h2>¿Listo para dar vida a tu proyecto? ¡Conéctate hoy mismo para discutir tu proyecto y posibles colaboraciones!</h2>
+        <Contact client:visible/>
+    </div>
+</section>
+
+<style>
+    .contact
+    {
+        display: flex;
+        height: 100vh;
+        padding: 70px 100px;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--light-gray);
+        color: var(--white);
+    }
+
+    .contact-left
+    {
+        flex-basis: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-left-info
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-left-info-social
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    a
+    {
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .contact-left-info-social-icon
+    {
+        width: 30px;
+        height: 30px;
+        background: var(--white);
+        border-radius: 5px;
+    }
+
+    .contact-right
+    {
+        flex-basis: 75%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .contact
+        {
+            padding: 40px 20px;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact h2
+        {
+            font-size: 36px;
+        }
+
+        .contact-left,
+        .contact-left-info
+        {
+            flex-basis: 100%;
+            width: 100%;
+        }
+        .contact-left-info-social
+        {
+            width: 100%;
+            padding: 0;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .contact-left-info-social-icon
+        {
+            width: 40px;
+            height: 40px;
+        }
+
+        a
+        {
+            gap: 0;
+        }
+
+        .contact-left-info-social span
+        {
+            display: none;
+        }
+
+        .contact-left-info-social-icon
+        {
+            width: 20px;
+            height: 20px;
+        }
+
+        .contact-right
+        {
+            gap: 40px;
+        }
+
+        .contact-right h2
+        {
+            font-size: 24px;
+        }
+    }
+</style>

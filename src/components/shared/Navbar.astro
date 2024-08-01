@@ -1,0 +1,273 @@
+---
+import PopupButton from "../react-components/PopupButton";
+
+/*
+interface Props
+{
+    options: string[];
+}
+
+const { options } = Astro.props;
+*/
+---
+<nav>
+    <div class="logo-container">
+        <a href="/">
+            <h1>NOVAGL</h1>
+        </a>
+    </div>
+    <input type="checkbox" id="check"/>
+    <label for="check" class="icons">
+        <svg class="menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6l16 0"></path>
+            <path d="M4 12l16 0"></path>
+            <path d="M4 18l16 0"></path>
+        </svg>
+        <svg class="close" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+        </svg>
+    </label>
+    <div class="option-container">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/services">Servicios</a></li>
+            <li><a href="/projects">Portfolio</a></li>
+        </ul>
+    </div>
+    <div class="button-container">
+        <PopupButton client:visible />
+    </div>
+    <!--<button><a href="#contact">Contáctanos</a></button>-->
+</nav>
+
+<style>
+    nav
+    {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        font-weight: 300;
+    }
+
+    .logo-container
+    {
+        flex-basis: 30%;
+    }
+
+    .logo-container h1
+    {
+        font-family: 'Organetto', sans-serif;
+        font-size: 32px;
+        font-weight: 100;
+        letter-spacing: 9px;
+        background: linear-gradient(90deg, #8200FF 0%, #FF4200 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+
+    .option-container
+    {
+        width: 100%;
+        flex-basis: 40%;
+    }
+
+    .button-container
+    {
+        flex-basis: 30%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul
+    {
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        list-style: none;
+        transition: 0.3s all ease-in-out;
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: inherit;
+        transition: 0.3s all ease-in-out;
+    }
+
+    a:hover
+    {
+        color: var(--orange);
+    }
+
+    .icons
+    {
+        cursor: pointer;
+        display: none;
+    }
+
+    #check
+    {
+        display: none;
+    }
+
+    @media screen and (max-width: 767px)
+    {
+        nav
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .icons
+        {
+            display: flex;
+        }
+
+        .option-container
+        {
+            display: none;
+        }
+
+        #check:checked~.icons .menu
+        {
+            display: none;
+        }
+
+        #check:checked~.icons .close
+        {
+            display: flex;
+        }
+
+        #check:checked~.option-container
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100vh;
+            background: var(--orange);
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            transition: 1s all ease-in-out;
+            animation: slide 0.6s ease-out;
+        }
+
+        #check:checked~.option-container ul
+        {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            font-size: 30px;
+            color: #FFF;
+            padding: 30px;
+            align-items: flex-start;
+            z-index: 1;
+            animation: slide 0.6s ease-in-out;
+            transition: 1s all ease-in-out;
+        }
+
+        #check:not(:checked)~.option-container
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100vh;
+            background: var(--orange);
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            transition: 1s all ease-in-out;
+            transform: translateX(-100vw);
+        }
+
+        #check:not(:checked)~.option-container ul
+        {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            font-size: 30px;
+            color: #FFF;
+            padding: 30px;
+            align-items: flex-start;
+            z-index: 1;
+            animation: slide 1s ease-in-out;
+            transition: 1s all ease-in-out;
+        }
+
+        #check:checked~.option-container a
+        {
+            text-align: left;
+        }
+
+        a:hover
+        {
+            color: var(--dark-gray);
+        }
+
+        .close
+        {
+            display: none;
+        }
+
+        .button-container
+        {
+            display: none;
+        }
+
+        @keyframes slide
+        {
+            0%
+            {
+                left: -100%;
+            }
+
+            100%
+            {
+                left: 0;
+            }
+        }
+
+        @keyframes fadeOut
+        {
+            0%
+            {
+                background: rgba(0, 0, 0, 0);
+            }
+
+            100%
+            {
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px)
+    {
+        nav
+        {
+            padding: 30px 30px;
+        }
+
+        ul
+        {
+            gap: 25px;
+        }
+    }
+</style>

@@ -1,0 +1,135 @@
+.contact-right
+{
+    font-family: 'Satoshi', sans-serif;
+    position: relative;
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contact-right h2
+{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.contact-right-form
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-input
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-right-form-info
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.contact-right-form-details
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.contact-right-form-info div,
+.contact-right-form-details div
+{
+    width: 100%;
+}
+
+.contact-right-form-info input,
+.contact-right-form-details input,
+.contact-right-form textarea,
+.contact-right-form select
+{
+    font-family: 'Satoshi', sans-serif;
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #202329;
+    color: #FFFFFF;
+    resize: none;
+}
+
+.contact-right-form textarea
+{
+    height: 100px;
+}
+
+.number-form::-webkit-inner-spin-button,
+.number-form::-webkit-outer-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.contact-right-form-info input::placeholder,
+.contact-right-form-details input::placeholder,
+.contact-right-form textarea::placeholder
+{
+    color: #999;
+}
+
+.contact-right-form button
+{
+    font-family: 'Satoshi', sans-serif;
+    margin: 10px 0;
+    width: 40%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #FF4200;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-right-form button:hover
+{
+    background: #FFF;
+    color: #FF4200;
+}
+
+@media screen and (max-width: 768px)
+{
+    .contact-right
+    {
+        flex-basis: 100%;
+    }
+
+    .contact-right h2
+    {
+        font-size: 20px;
+    }
+
+    .contact-right-form button
+    {
+        width: 70%;
+    }
+
+    .contact-right-form-info
+    {
+        flex-direction: column;
+    }
+
+}

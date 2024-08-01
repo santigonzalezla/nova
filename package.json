@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.1",
+    "@astrojs/node": "^8.3.2",
+    "@astrojs/react": "^3.6.1",
+    "@astrojs/ts-plugin": "^1.9.1",
+    "@react-email/components": "^0.0.22",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.12.3",
+    "astro-icon": "^1.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-modal": "^3.16.1",
+    "resend": "^3.5.0",
+    "typescript": "^5.5.2"
+  }
+}

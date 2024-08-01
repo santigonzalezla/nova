@@ -1,0 +1,112 @@
+---
+import ProjectItem from "../../react-components/ProjectItem";
+
+const projects = [
+    {
+        name: "Proyecto #1: Conectividad Global",
+        description: "Desarrollamos una página web para Conectividad Global, una agencia de medios, que incluye un diseño moderno y atractivo, un catálogo detallado de servicios, y casos de éxito. La plataforma también cuenta con una sección de miniapps para facilitar la gestión y automatización de pedidos y entregas.",
+        client: "Conectividad Global",
+        price: "$600 USD",
+        time: "4 semanas",
+        image: "https://i.imgur.com/s0uPWro.png",
+        link: "https://i.imgur.com/s0uPWro.png"
+    },
+    {
+        name: "Proyecto #2: Macondo Magic Softwares",
+        description: "Creamos una landing page para Macondo Softwares, destacando su oferta de software para restaurantes. La página incluye secciones de información, servicios, y miniapps, además de un apartado para la descarga de la app móvil, facilitando su gestión.",
+        client: "Macondo",
+        price: "$450 USD",
+        time: "2 semanas",
+        image: "https://i.imgur.com/rGgZt0o.png",
+        link: "https://i.imgur.com/rGgZt0o.png"
+    },
+    {
+        name: "Proyecto #3: Hotel Luna Nueva",
+        description: "Desarrollamos una página web para Luna Nueva, un hotel en Riohacha, Colombia. La página incluye secciones de información, servicios, detalles sobre las habitaciones, planes de estadía, y una funcionalidad de reservas. Además, integramos un sistema de conexión de calendarios entre Booking.com y LobbyPMS.",
+        client: "Pablo Lozada",
+        price: "$450 USD",
+        time: "2 semanas",
+        image: "https://i.imgur.com/CTVt0KL.png",
+        link: "https://i.imgur.com/CTVt0KL.png"
+    }
+]
+---
+
+<section class="projects" id="projects">
+    <div class="projects-top">
+        <h3>Conoce los servicios que podemos ofrecerte</h3>
+        <h2>Convierte tu visión en realidad</h2>
+    </div>
+    <div class="projects-bottom">
+        {projects.map((project, index) => (
+            <ProjectItem key={index} project={project} client:visible />
+        ))}
+    </div>
+</section>
+
+<style>
+    .projects
+    {
+        padding: 60px 100px;
+        height: 300vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        overflow: hidden;
+    }
+
+    .projects-top
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects-top h2
+    {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .projects-top h3
+    {
+        color: var(--orange);
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .projects-bottom
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap: 90px;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .projects
+        {
+            padding: 40px 20px;
+            height: 100%;
+        }
+
+        .projects-top h2
+        {
+            font-size: 30px;
+        }
+
+        .projects-top h3
+        {
+            font-size: 16px;
+        }
+
+        .projects-bottom
+        {
+            gap: 40px;
+        }
+
+    }
+</style>

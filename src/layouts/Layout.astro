@@ -1,0 +1,67 @@
+---
+import { ViewTransitions } from "astro:transitions";
+interface Props
+{
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Desarrollo de soluciones digitales innovadoras que ayudan a nuestros clientes a alcanzar
+			sus metas de negocio. "
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root
+	{
+		--purple: #8200FF;
+		--light-purple: rgba(130, 0, 255, 0.1);
+		--orange: #FD4302;
+		--dark-gray: #202329;
+		--light-gray: #2B3138;
+		--white: rgb(255, 255, 255);
+		--dark-white: #F7F7F7;
+		--gradient: linear-gradient(90deg, #8200FF 0%, #FF4200 80%);
+	}
+
+	*
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html
+	{
+		font-family: 'Satoshi', sans-serif;
+		background: var(--white);
+		color: var(--dark-gray);
+		scroll-behavior: smooth;
+
+	}
+	
+	@font-face {
+		font-family: 'Organetto';
+		src: url('../fonts/Organetto.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>

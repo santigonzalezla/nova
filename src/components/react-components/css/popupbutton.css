@@ -1,0 +1,62 @@
+.popup-button
+{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 300;
+    background: var(--gradient);
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.popup-button:hover
+{
+    transform: scale(1.1);
+}
+
+.popup-modal
+{
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+    inset: 40px;
+}
+
+.x-button
+{
+    background: transparent;
+    border: none;
+    width: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 300px;
+    color: #999 ;
+    cursor: pointer;
+    position: absolute;
+    font-size: 32px;
+    font-weight: 700;
+    right: 30px;
+    top: 20px;
+}
+
+@media screen and (max-width: 767px)
+{
+    .popup-modal
+    {
+        margin: 0;
+    }
+}

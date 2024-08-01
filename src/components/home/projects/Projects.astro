@@ -1,0 +1,128 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+const work = [
+    {
+        id: 1,
+        title: 'Desarrollo Web para empresa de alimentos',
+        image: 'https://www.arshakir.com/uploads/p2/full-preview-restaurant-landing-page.png',
+        time: '10 Semanas',
+        cost: '$10,000 USD',
+        type: 'Desarrollo Web',
+    },
+    {
+        id: 2,
+        title: 'Desarrollo Web para empresa de comida rápida',
+        image: 'https://www.arshakir.com/uploads/p2/cryptocurrency-wallet-dashboard-ui.png',
+        time: '10 Semanas',
+        cost: '$10,000 USD',
+        type: 'Desarrollo Web',
+    },
+    {
+        id: 3,
+        title: 'Eccomerce para empresa de tecnología',
+        image: 'https://www.arshakir.com/uploads/p2/cryptocurrency-dashboard-ui-concept3.png',
+        time: '20 Semanas',
+        cost: '$5,000 USD',
+        type: 'Eccomerce',
+    },
+    {
+        id: 4,
+        title: 'Eccomerce para empredimiento de pijamas',
+        image: 'https://www.arshakir.com/uploads/p2/digital-wallat-web-app-dashboard.png',
+        time: '6 Semanas',
+        cost: '$2,000 USD',
+        type: 'Eccomerce',
+    },
+    {
+        id: 5,
+        title: 'landing para empredimiento de postres',
+        image: 'https://www.arshakir.com/uploads/p2/dribbble-pro-dashboard-ui-concept.png',
+        time: '2 Semanas',
+        cost: '$1,000 USD',
+        type: 'Landing',
+    },
+    {
+        id: 6,
+        title: 'Eccomerce para una farmacia',
+        image: 'https://www.arshakir.com/uploads/p2/full-preview-restaurant-landing-page.png',
+        time: '10 Semanas',
+        cost: '$10,000 USD',
+        type: 'Eccomerce',
+    }
+]
+---
+
+
+<section id="projects" class="projects">
+    <div class="projects-top">
+        <h3>Conoce los servicios que podemos ofrecerte</h3>
+        <h2>Convierte tu visión en realidad</h2>
+    </div>
+    <div class="projects-bottom">
+        {work.map((project) => (
+            <ProjectCard {...project} />
+        ))}
+    </div>
+</section>
+
+<style>
+    .projects
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        padding: 70px 100px;
+    }
+
+    h3
+    {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--orange);
+        text-align: center;
+        width: 100%;
+    }
+
+    h2
+    {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .projects-bottom
+    {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .projects
+        {
+            padding: 40px 20px;
+            gap: 20px;
+        }
+
+        .projects h2
+        {
+            font-size: 36px;
+        }
+
+        .projects h3
+        {
+            font-size: 16px;
+        }
+
+        .projects-bottom
+        {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+</style>

@@ -1,0 +1,186 @@
+---
+
+---
+
+<footer class="footer">
+    <div class="footer-first">
+        <div class="footer-logo">
+            <h1>NOVAGL</h1>
+        </div>
+        <div class="first-social">
+            <div class="first-social-icon">
+            </div>
+            <div class="first-social-icon">
+            </div>
+            <div class="first-social-icon">
+            </div>
+            <div class="first-social-icon">
+            </div>
+        </div>
+    </div>
+    <div class="footer-second">
+        <h3>Company</h3>
+        <ul>
+            <li>Nosotros</li>
+            <li>Servicios</li>
+            <li>Testimonios</li>
+            <li>Portafolio</li>
+            <li>Contacto</li>
+        </ul>
+    </div>
+    <div class="footer-third">
+        <h3>Legal</h3>
+        <ul>
+            <li>Política de privacidad</li>
+            <li>Términos y condiciones</li>
+        </ul>
+    </div>
+    <div class="footer-fourth">
+        <h3>Redes sociales</h3>
+        <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>LinkedIn</li>
+            <li>TikTok</li>
+        </ul>
+    </div>
+    <div class="footer-fifth">
+        <h3>Contáctanos</h3>
+        <ul>
+            <li>
+                +51 999 999 999
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<style>
+    .footer
+    {
+        padding: 60px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: #FFF;
+        background: #202329;
+    }
+
+    .footer-logo
+    {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-logo h1
+    {
+        font-family: 'Organetto', sans-serif;
+        font-size: 32px;
+        font-weight: 100;
+        letter-spacing: 9px;
+        background: linear-gradient(90deg, #8200FF 0%, #FF4200 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+
+    .footer-first
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 0;
+    }
+
+    .first-social
+    {
+        display: flex;
+        gap: 20px;
+    }
+
+    .first-social-icon
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .first-social-icon:hover
+    {
+        color: #FF4200;
+        transform: scale(1.3);
+    }
+
+    .first-social div
+    {
+        background: #2B3138;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .footer-second,
+    .footer-third,
+    .footer-fourth,
+    .footer-fifth
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-second ul,
+    .footer-third ul,
+    .footer-fourth ul,
+    .footer-fifth ul
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        list-style: none;
+        color: #999;
+    }
+
+    .footer-second ul li:hover,
+    .footer-third ul li:hover,
+    .footer-fourth ul li:hover,
+    .footer-fifth ul li:hover
+    {
+        color: #FF4200;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .footer
+        {
+            flex-direction: column;
+            gap: 20px;
+            padding: 40px 20px;
+            align-items: center;
+        }
+
+        .footer-first
+        {
+
+        }
+
+        .footer-logo h1
+        {
+            font-size: 30px;
+            align-self: center;
+        }
+
+        .footer-third,
+        .footer-fourth,
+        .footer-fifth
+        {
+            display: none;
+        }
+    }
+</style>

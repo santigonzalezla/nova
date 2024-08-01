@@ -1,0 +1,153 @@
+---
+import ServiceForm from "../../react-components/ServiceForm";
+---
+
+<div class="hero">
+    <div class="hero-left">
+        <h1>Soluciones a medida para tu éxito digital</h1>
+        <p>Descubre una amplia gama de servicios especializados diseñados para satisfacer tus necesidades y superar tus expectativas.</p>
+        <ServiceForm client:visible/>
+    </div>
+    <div class="hero-right">
+        <svg class="icon line" width="79" height="5" viewBox="0 0 79 5" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="2.5" x2="78.0256" y2="2.5" stroke="#FF4200" stroke-width="5"/></svg>
+        <svg class="icon circle" width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28.0128" cy="28" r="24.5" stroke="#FF4200" stroke-width="7"/><circle cx="28.0128" cy="28" r="12" fill="#FFFFFF"/></svg>
+        <svg class="icon x" width="23" height="25" viewBox="0 0 23 25" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M0.260817 25L10.5328 11.752L10.4848 12.424L0.788817 0.0879974H2.66082L11.4928 11.416H10.8208L19.6048 0.0879974H21.4288L11.6848 12.616L11.7328 11.704L22.1488 25H20.1808L10.8688 12.904L11.3968 12.952L2.13282 25H0.260817Z" fill="#FFFFFF"/></svg>
+        <img loading="lazy" src="https://i.imgur.com/xrdOBNm.png" alt="Hero Servicios"/>
+    </div>
+</div>
+
+<style>
+    .hero
+    {
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .hero-left
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 25px;
+        flex-basis: 65%;
+    }
+
+    .hero-left h1
+    {
+        font-size: 60px;
+        font-weight: 900;
+        width: 80%;
+    }
+
+    .hero-left p
+    {
+        font-weight: 300;
+        width: 70%;
+    }
+
+    .hero-right
+    {
+        flex-basis: 35%;
+        width: 90%;
+        height: 500px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        background: #202329;
+        border-radius: 50px;
+    }
+
+    .hero-right img
+    {
+        position: absolute;
+        bottom: 10%;
+        left: -5%;
+        width: 110%;
+    }
+
+    .icon
+    {
+        position: absolute;
+    }
+
+    .line
+    {
+        right: 30px;
+        bottom: 10%;
+    }
+
+    .x
+    {
+        bottom: 10%;
+        left: 40px;
+    }
+
+    .circle
+    {
+        top: 40px;
+        right: 35%;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .hero
+        {
+            padding: 20px 0;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-left
+        {
+            width: 100%;
+        }
+
+        .hero-left h1
+        {
+            width: 100%;
+            font-size: 34px;
+        }
+
+        .hero-left p
+        {
+            width: 100%;
+        }
+
+        .hero-right
+        {
+            overflow: visible;
+            flex-basis: 100%;
+            width: 100%;
+            height: 400px;
+        }
+
+        .hero-right img
+        {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            left: 1%;
+            bottom: 0;
+        }
+
+        .line
+        {
+            right: 50px;
+            bottom: 5%;
+        }
+
+        .x
+        {
+            bottom: 10%;
+            left: 30px;
+        }
+    }
+</style>
