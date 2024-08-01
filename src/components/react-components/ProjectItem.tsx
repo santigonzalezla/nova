@@ -2,7 +2,6 @@ import React from "react";
 import './css/projectitem.css';
 
 interface Project {
-    id: number;
     name: string;
     description: string;
     image: string;

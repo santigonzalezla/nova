@@ -1,11 +1,8 @@
 import React, { useRef, useState } from "react";
 import './css/contact.css';
-import { Resend } from "resend";
-import Email from "./Email.tsx";
 
-const Contact: React.FC = () =>
+const ContactForm: React.FC = () =>
 {
-    const resend = new Resend('re_6G2r7XQn_NgXT6mTnciCgo2yDuo9PbwuX');
     const form = useRef<HTMLFormElement | null>(null);
     const [showBanner, setShowBanner] = useState(false);
     const [selectedOption, setSelectedOption] = useState('');
@@ -176,4 +173,4 @@ const Contact: React.FC = () =>
     );
 }
 
-export default Contact;
+export default ContactForm;
