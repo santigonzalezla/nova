@@ -33,6 +33,7 @@ const ContactForm: React.FC = () =>
     {
         e.preventDefault();
 
+        /*
         try
         {
             const res = await fetch('/api/sendEmail.json', {
@@ -56,6 +57,7 @@ const ContactForm: React.FC = () =>
         {
             console.error(e);
         }
+        */
 
         setFormData({
             full_name: "",
