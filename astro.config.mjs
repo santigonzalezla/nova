@@ -8,9 +8,6 @@ export default defineConfig({
   integrations: [react(), icon()],
   output: "server",
   adapter: node({
-    mode: "standalone"
+    mode: "middleware"
   }),
-  server: {
-    host: true
-  }
 });
